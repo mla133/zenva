@@ -1,0 +1,47 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC=g++$/;"	m
+DUNGEON_H	Dungeon.h	4;"	d
+Dungeon	Dungeon.cpp	/^Dungeon::Dungeon(Player p)$/;"	f	class:Dungeon
+Dungeon	Dungeon.h	/^class Dungeon $/;"	c
+EXE	Makefile	/^EXE=dungeon$/;"	m
+FLAGS	Makefile	/^FLAGS=-I.\/ -O3$/;"	m
+GAMECHARACTER_H	GameCharacter.h	4;"	d
+GameCharacter	GameCharacter.cpp	/^GameCharacter::GameCharacter(string n, int h, int a, int d)$/;"	f	class:GameCharacter
+GameCharacter	GameCharacter.h	/^class GameCharacter$/;"	c
+ITEM_H	Item.h	4;"	d
+Item	Item.cpp	/^Item::Item(string n, int h, int a, int d)$/;"	f	class:Item
+Item	Item.h	/^class Item$/;"	c
+OBJECTS	Makefile	/^OBJECTS=main.o$/;"	m
+PLAYER_H	Player.h	4;"	d
+Player	Player.cpp	/^Player::Player(string n, int h, int a, int d) : GameCharacter(n, h, a, d)$/;"	f	class:Player
+Player	Player.h	/^class Player: public GameCharacter$/;"	c
+ROOM_H	Room.h	6;"	d
+Room	Room.cpp	/^Room::Room(int p, bool ie, vector<Item> items, vector<GameCharacter> gcs)$/;"	f	class:Room
+Room	Room.h	/^class Room$/;"	c
+attack	GameCharacter.h	/^		int maxHealth, currentHealth, attack, defense;$/;"	m	class:GameCharacter
+attack	Item.h	/^		int health, attack, defense;$/;"	m	class:Item
+checkIsDead	GameCharacter.cpp	/^bool GameCharacter::checkIsDead()$/;"	f	class:GameCharacter
+currentHealth	GameCharacter.h	/^		int maxHealth, currentHealth, attack, defense;$/;"	m	class:GameCharacter
+currentRoom	Player.h	/^		Room * currentRoom;$/;"	m	class:Player
+defense	GameCharacter.h	/^		int maxHealth, currentHealth, attack, defense;$/;"	m	class:GameCharacter
+defense	Item.h	/^		int health, attack, defense;$/;"	m	class:Item
+enemies	Room.h	/^		vector<GameCharacter> enemies;$/;"	m	class:Room
+handleLootActions	Dungeon.cpp	/^void Dungeon::handleLootActions(Room * room)$/;"	f	class:Dungeon
+health	Item.h	/^		int health, attack, defense;$/;"	m	class:Item
+inventory	Player.h	/^		vector<Item> inventory;$/;"	m	class:Player
+isExit	Room.h	/^		bool isExit;$/;"	m	class:Room
+items	Room.h	/^		vector<Item> items;$/;"	m	class:Room
+main	main.cpp	/^int main ()$/;"	f
+maxHealth	GameCharacter.h	/^		int maxHealth, currentHealth, attack, defense;$/;"	m	class:GameCharacter
+name	GameCharacter.h	/^		string name;$/;"	m	class:GameCharacter
+name	Item.h	/^		string name;$/;"	m	class:Item
+player	Dungeon.h	/^		Player player;$/;"	m	class:Dungeon
+pos	Room.h	/^		int pos;$/;"	m	class:Room
+previousRoom	Player.h	/^		Room * previousRoom;$/;"	m	class:Player
+rooms	Dungeon.h	/^		Room rooms[4];$/;"	m	class:Dungeon
+takeDamage	GameCharacter.cpp	/^int GameCharacter::takeDamage(int amount)$/;"	f	class:GameCharacter
