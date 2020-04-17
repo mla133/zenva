@@ -6,3 +6,6 @@ Console-based dungeon crawler using C++ classes and implementation
 
 ## FirstGodotProject
 Simple 2D platformer using Godot Engine
+
+## FirstGodotProject
+First 2D RPG using Godot Engine
