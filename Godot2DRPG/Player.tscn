@@ -14,8 +14,13 @@
 [ext_resource path="res://Sprites/Player/player_e_1.png" type="Texture" id=12]
 [ext_resource path="res://Sprites/Player/player_e_2.png" type="Texture" id=13]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ ExtResource( 12 ), ExtResource( 5 ), ExtResource( 13 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "MoveRight",
+"speed": 10.0
+}, {
 "frames": [ ExtResource( 4 ), ExtResource( 1 ), ExtResource( 3 ), ExtResource( 1 ) ],
 "loop": true,
 "name": "MoveDown",
@@ -26,20 +31,10 @@ animations = [ {
 "name": "MoveLeft",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 12 ), ExtResource( 5 ), ExtResource( 13 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "MoveRight",
-"speed": 10.0
-}, {
 "frames": [ ExtResource( 8 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "MoveUp",
 "speed": 10.0
-}, {
-"frames": [ ExtResource( 5 ) ],
-"loop": true,
-"name": "IdleRight",
-"speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ) ],
 "loop": true,
@@ -55,9 +50,14 @@ animations = [ {
 "loop": true,
 "name": "IdleDown",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "IdleRight",
+"speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="CapsuleShape2D" id=2]
 radius = 20.8261
 height = 10.3746
 
@@ -65,11 +65,11 @@ height = 10.3746
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "IdleDown"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 enabled = true

@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://UI/UI_Square.png" type="Texture" id=1]
+[ext_resource path="res://Font/Roboto-Bold.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Font/Roboto-Regular.tres" type="DynamicFont" id=3]
+[ext_resource path="res://UI.gd" type="Script" id=4]
+
+[node name="UI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BG" type="ColorRect" parent="."]
+anchor_left = 0.499
+anchor_top = 1.0
+anchor_right = 0.499
+anchor_bottom = 1.0
+margin_left = -124.976
+margin_top = -80.0
+margin_right = 125.024
+margin_bottom = -20.0
+color = Color( 0.195313, 0.167084, 0.167084, 1 )
+
+[node name="LevelBG" type="ColorRect" parent="BG"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 55.0
+margin_bottom = 55.0
+
+[node name="LevelText" type="Label" parent="BG/LevelBG"]
+margin_top = -1.0
+margin_right = 50.0
+margin_bottom = 50.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "25"
+align = 1
+valign = 1
+
+[node name="HealthBar" type="TextureProgress" parent="BG"]
+margin_left = 60.0
+margin_top = 5.0
+margin_right = 245.0
+margin_bottom = 35.0
+value = 50.0
+texture_under = ExtResource( 1 )
+texture_progress = ExtResource( 1 )
+tint_under = Color( 0.321569, 0.278431, 0.278431, 1 )
+tint_progress = Color( 0.996078, 0.0196078, 0.0196078, 1 )
+nine_patch_stretch = true
+
+[node name="XpBar" type="TextureProgress" parent="BG"]
+margin_left = 60.0
+margin_top = 39.0
+margin_right = 245.0
+margin_bottom = 56.0
+value = 50.0
+texture_under = ExtResource( 1 )
+texture_progress = ExtResource( 1 )
+tint_under = Color( 0.321569, 0.278431, 0.278431, 1 )
+tint_progress = Color( 0.368627, 0.996078, 0.0196078, 1 )
+nine_patch_stretch = true
+
+[node name="GoldText" type="Label" parent="BG"]
+margin_left = 2.0
+margin_top = -27.5281
+margin_right = 248.0
+margin_bottom = -3.52808
+custom_fonts/font = ExtResource( 3 )
+text = "Gold: 500"
+align = 1
+valign = 1
